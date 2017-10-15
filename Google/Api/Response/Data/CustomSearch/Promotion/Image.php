@@ -14,56 +14,54 @@ namespace Google\Api\Response\Data\CustomSearch\Promotion;
 use Google\Api\Response\Data\AbstractData;
 
 /**
- * BodyLine is a single promotion block object from the Google Custom Search API.
+ * Image is a single promotion image from the Google Custom Search API.
  *
  * @author Stephen Melrose <me@stephenmelrose.co.uk>
- * 
- * @link http://www.google.com/cse/docs/resultsxml.html
  */
-class BodyLine extends AbstractData
+class Image extends AbstractData
 {
     /**
      * @var string
      */
-    protected $title;
+    protected $source;
     
     /**
-     * @var string
+     * @var integer
      */
-    protected $url;
+    protected $width;
     
     /**
-     * @var string
+     * @var integer
      */
-    protected $link;
+    protected $height;
     
     /**
-     * Gets the text.
+     * Gets the URL of the image.
      *
      * @return string
      */
-    public function getTitle()
+    public function getSource()
     {
-        return $this->title;
+        return $this->source;
     }
     
     /**
-     * Gets the URL.
+     * Gets the width.
      *
-     * @return string
+     * @return integer
      */
-    public function getUrl()
+    public function getWidth()
     {
-        return $this->url;
+        return $this->width;
     }
     
     /**
-     * Gets the link.
+     * Gets the height.
      *
-     * @return string
+     * @return integer
      */
-    public function getLink()
+    public function getHeight()
     {
-        return $this->link;
+        return $this->height;
     }
 }
